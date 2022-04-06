@@ -1,0 +1,24 @@
+PUT movies
+{
+  "mappings": {
+    "properties": {
+      "moviename": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "daterelease": {
+        "type": "date"
+      },
+      "rating": {
+        "type": "integer"
+      },
+      "genre": {
+        "type": "keyword"
+      }
+    }
+  }
+}
