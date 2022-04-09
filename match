@@ -1,0 +1,25 @@
+PUT movies/_doc/06042022
+{
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "string-as-float": {
+          "match_mapping_type": "string",
+          "match": "float-*",
+          "runtime": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "strings-as-full-text": {
+          "match_mapping_type": "string",
+          "match": "full-*",
+          "runtime": {
+            "type": "text"
+          }
+        }
+      }
+    ]
+  }
+}
